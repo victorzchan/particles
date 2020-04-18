@@ -1,4 +1,3 @@
-// https://www.smashingmagazine.com/2020/04/particle-trail-animation-javascript/
 import anime from "animejs";
 import "./styles.css";
 

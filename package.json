@@ -1,13 +1,10 @@
 {
   "name": "particles",
+  "author": "Victor Chan",
   "private": true,
   "scripts": {
     "build": "webpack",
-    "start:dev": "webpack-dev-server",
-    "format": "prettier --loglevel warn --write \"**/*.{js,css,md}\"",
-    "posttest": "npm run format",
-    "lint": "eslint . --cache --fix",
-    "pretest": "npm run lint"
+    "start:dev": "webpack-dev-server"
   },
   "dependencies": {
     "animejs": "^3.2.0"
@@ -17,8 +14,6 @@
     "@babel/preset-env": "^7.9.5",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.5.2",
-    "eslint": "^6.8.0",
-    "prettier": ">=2",
     "style-loader": "^1.1.4",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
