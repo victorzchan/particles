@@ -36,24 +36,27 @@ for (let i = 0; i <= l; i++) {
     }
 }
 
+const tailSpread = 30;
+const animationStagger = 2;
+const lifespan = [500, 1500];
 anime({
     loop: true,
     easing: "linear",
     targets: document.getElementsByClassName('dot'),
     opacity: [
-        { value: 1, duration: 50, delay: anime.stagger(2) },
-        { value: 0, duration: 1200 }
+        { value: 1, duration: 50, delay: anime.stagger(animationStagger) },
+        { value: 0, duration: () => anime.random(...lifespan) }
     ],
-    width: { value: 2, duration: 500, delay: anime.stagger(2) },
-    height: { value: 2, duration: 500, delay: anime.stagger(2) },
+    width: { value: 2, duration: 500, delay: anime.stagger(animationStagger) },
+    height: { value: 2, duration: 500, delay: anime.stagger(animationStagger) },
     translateX: {
-        value: () => anime.random(-30, 30),
-        duration: 1500,
-        delay: anime.stagger(2)
+        value: () => anime.random(-tailSpread, tailSpread),
+        duration: lifespan[1],
+        delay: anime.stagger(animationStagger)
     },
     translateY: {
-        value: () => anime.random(-30, 30),
-        duration: 1500,
-        delay: anime.stagger(2)
+        value: () => anime.random(-tailSpread, tailSpread),
+        duration: lifespan[1],
+        delay: anime.stagger(animationStagger)
     },
 });
