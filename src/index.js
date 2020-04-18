@@ -46,4 +46,14 @@ anime({
     ],
     width: { value: 2, duration: 500, delay: anime.stagger(2) },
     height: { value: 2, duration: 500, delay: anime.stagger(2) },
+    translateX: {
+        value: () => anime.random(-30, 30),
+        duration: 1500,
+        delay: anime.stagger(2)
+    },
+    translateY: {
+        value: () => anime.random(-30, 30),
+        duration: 1500,
+        delay: anime.stagger(2)
+    },
 });
