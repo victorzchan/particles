@@ -28,9 +28,20 @@ for (let i = 0; i <= l; i++) {
         dot.style.height = `${size}px`;
         dot.style.left = `${x + anime.random(-spread, spread)}px`;
         dot.style.top = `${y + anime.random(-spread, spread)}px`;
+        dot.style.opacity = 0;
 
         dot.classList.add('dot');
 
         container.appendChild(dot);
     }
 }
+
+anime({
+    loop: true,
+    easing: "linear",
+    targets: document.getElementsByClassName('dot'),
+    opacity: [
+        { value: 1, duration: 50, delay: anime.stagger(2) },
+        { value: 0, duration: 1200 }
+    ],
+});
