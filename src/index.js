@@ -44,4 +44,6 @@ anime({
         { value: 1, duration: 50, delay: anime.stagger(2) },
         { value: 0, duration: 1200 }
     ],
+    width: { value: 2, duration: 500, delay: anime.stagger(2) },
+    height: { value: 2, duration: 500, delay: anime.stagger(2) },
 });
