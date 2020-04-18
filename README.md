@@ -7,3 +7,7 @@ This was derived from a tutorial from [Smashing Magazine](https://www.smashingma
 - Run `yarn` to install dependencies
 - Run `yarn start:dev`
 - Open browser to `localhost:8080`
+
+## Screenshot
+
+![Particle](/doc/assets/particles.gif)
